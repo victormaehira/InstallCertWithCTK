@@ -8,13 +8,10 @@
 import SwiftUI
 
 @main
-struct InstallCertWithCTKSApp: App {
+struct InstallCertWithCTKSApp: App {    
     var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .task {
-                    TokenRegistration.registerIfPossible()
-                }
-        }
+            WindowGroup {
+                ContentView()
+            }
     }
 }

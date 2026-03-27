@@ -13,7 +13,10 @@ struct ContentView: View {
             Image(systemName: "key")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Instalar certificado")
+            Text("Agora vai!")
+            Button("Instalar certificado") {
+                TokenRegistration.registerIfPossible()
+            }
         }
         .padding()
     }

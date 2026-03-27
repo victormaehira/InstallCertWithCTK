@@ -12,6 +12,9 @@ struct InstallCertWithCTKSApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .task {
+                    TokenRegistration.registerIfPossible()
+                }
         }
     }
 }

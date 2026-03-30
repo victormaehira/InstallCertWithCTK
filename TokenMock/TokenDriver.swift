@@ -16,6 +16,7 @@ final class TokenDriver: TKTokenDriver, TKTokenDriverDelegate {
         super.init()
         delegate = self
         print(">TokenDriver.init")
+        NSLog("TOKEN DRIVER STARTED")
     }
 
     // MARK: - TKTokenDriverDelegate

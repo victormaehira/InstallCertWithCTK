@@ -12,7 +12,10 @@ import Foundation
 final class Token: TKToken, TKTokenDelegate {
 
     override init(tokenDriver: TKTokenDriver, instanceID: TKToken.InstanceID) {
+        print(">Token.init TKToken.InstanceID =" )
         super.init(tokenDriver: tokenDriver, instanceID: instanceID)
+        print(">Token.init")
+        NSLog("TOKEN INIT")
         delegate = self
     }
 

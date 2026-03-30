@@ -10,11 +10,13 @@
 			<string>br.com.certisign.InstallCertWithCTKS.TokenMock</string>
 			<key>com.apple.ctk.driver-class</key>
 			<string>$(PRODUCT_MODULE_NAME).TokenDriver</string>
-			<key>com.apple.ctk.token-type</key>
+            <key>com.apple.ctk.token-type</key>
 			<string>smartcard</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.ctk-tokens</string>
+        <key>NSExtensionPrincipalClass</key>
+        <string>$(PRODUCT_MODULE_NAME).TokenDriver</string>
 	</dict>
 </dict>
 </plist>

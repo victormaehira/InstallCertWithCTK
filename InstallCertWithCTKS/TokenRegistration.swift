@@ -30,7 +30,6 @@ enum TokenRegistration {
 
     static func registerIfPossible() {
         do {
-            print("************** Vou executar register")
             try register()
         } catch {
             print("TokenRegistration failed: \(error)")
@@ -90,14 +89,13 @@ enum TokenRegistration {
             print("TokenRegistration: driverConfig é NOT nil para classID \(tokenDriverClassID)")
         }
 
-        print("driverConfig.addTokenConfiguration")
         print("tokenInstanceID = " + tokenInstanceID)
         let tokenConfiguration = driverConfig.addTokenConfiguration(for: tokenInstanceID)
         print("EXECUTOU driverConfig.addTokenConfiguration")
         
-        print("Vou executar tokenConfiguration.keychainItems")
         tokenConfiguration.keychainItems = [certItem, keyItem]
-        print("tokenConfiguration.keychainItems")
+        print("EXECUTOU tokenConfiguration.keychainItems")
+        
     }
 
     private static func derDataFromBase64(_ base64: String) throws -> Data {

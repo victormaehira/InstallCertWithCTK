@@ -60,11 +60,13 @@ enum TokenRegistration {
         }
         
         let classID = TKTokenDriver.ClassID(tokenDriverClassID)
+        // "Esta linha abaixo que causa Configuration of token driver br.com.certisign.InstallCertWithCTKS.TokenMock failed: Error Domain=NSCocoaErrorDomain Code=4099 \"Não foi possível comunicar com um aplicativo auxiliar.\"")
         guard let driverConfig = TKTokenDriver.Configuration.driverConfigurations[classID] else {
             print("RegistrationError.noDriverConfiguration")
             throw RegistrationError.noDriverConfiguration(classID: tokenDriverClassID)
         }
-
+        print("driverConfig = TKTokenDriver.Configuration.driverConfigurations")
+        
         guard let certItem = TKTokenKeychainCertificate(
             certificate: certificate,
             objectID: certificateObjectID
